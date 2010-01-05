@@ -3,7 +3,7 @@ module BookWorm
     attr_accessor :authors, :isbn, :publisher, :title
     
     def initialize(node)
-      self.isbn = node['isbn']
+      self.isbn = node['isbn'] || node['isbn13']
       if title_node = node.search('Title').first
         self.title = title_node.content
       end

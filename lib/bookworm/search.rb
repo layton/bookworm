@@ -38,8 +38,8 @@ module BookWorm
       url_options = options.dup
 
       params = {
-        :access_key => config[:access_key],
-        :results => url_options.delete(:results)
+        'access_key' => config['access_key'],
+        'results' => url_options.delete(:results)
       }
       
       index = 1
